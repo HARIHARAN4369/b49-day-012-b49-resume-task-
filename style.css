@@ -1,65 +1,47 @@
-
-
-.boundary {
-    position: relative;
-    margin: auto;
-    width: 80%;
+.container{
+   
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main "
+    "sidebar content1 content2 content3"
+    "sidebar content1 content2 content3";
+    grid-gap:20px;
+    font-size:20px ;
+    text-align:center; 
+  
+} 
+.nav{
+    background-color:rgba(11, 11, 11, 0.577);
+    grid-area: nav;
+    border-radius: 8px;   
+    text-align-last: center; 
 }
-
-img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 20%;
-    border: 2px solid yellowgreen;
-    margin-top: 1%;
+.main{
+    background-color:rgba(11, 11, 11, 0.577);
+    grid-area: main;
+    border-radius: 8px;   
 }
-
-.banner {
-    height: 45%;
-    background-image: linear-gradient(45deg, #372bc0, #9840b8);
-    /* border: 2px solid skyblue; */
+.sidebar{
+    background-color:rgba(11, 11, 11, 0.577);
+    grid-area: sidebar;
+    border-radius: 8px;   
 }
-
-.name {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    padding: 1px;
-    text-align: center;
-    width: 25%;
-    height: 25%;
-    background-color: rgb(128, 232, 24);
-    border-radius: 25px;
-    color: white;
-    margin-bottom: 1%;
-    font-weight: bold;
+.content1{
+    background-color:rgba(11, 11, 11, 0.577);
+    grid-area:content1 ;
+    border-radius: 8px;   
 }
-
-.contact {
-    text-align: center;
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
-    font-weight: bolder;
+.content2{
+    background-color:rgba(11, 11, 11, 0.577);
+    grid-area:content2;
+    border-radius: 8px;   
 }
-
-.details {
-    column-count: 2;
-    column-rule: 2px solid gainsboro;
-}
-
-.skills {
-    list-style-type: none;
-}
-
-progress {
-    position: absolute;
-    width: 20%;
-    left: 20%;
-}
-
-h4 {
-    position: relative;
-    left: 3%;
+.content3{
+    background-color:rgba(11, 11, 11, 0.577);
+    grid-area:content3;
+    border-radius: 8px;   
 }
